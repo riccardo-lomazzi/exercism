@@ -1,0 +1,6 @@
+exercism.exe
+csharp/*/bin
+csharp/*/obj
+csharp/*/.vs
+csharp/*/*.sln
+**/.solution.json
