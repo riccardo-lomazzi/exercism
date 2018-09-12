@@ -3,4 +3,5 @@ csharp/*/bin
 csharp/*/obj
 csharp/*/.vs
 csharp/*/*.sln
+csharp/*/*.csproj.user
 **/.solution.json
