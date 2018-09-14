@@ -7,17 +7,14 @@ public static class Bob
         statement = statement.Trim();
         if(statement.Length == 0)
             return "Fine. Be that way!";
-        else
-        { 
-            if (IsItAShout(statement))
-                if (statement.EndsWith('?'))
-                    return "Calm down, I know what I'm doing!";
-                else
-                    return "Whoa, chill out!";
+        if (IsItAShout(statement))
+            if (statement.EndsWith('?'))
+                return "Calm down, I know what I'm doing!";
             else
-                if (statement.EndsWith('?'))
-                    return "Sure.";
-        }
+                return "Whoa, chill out!";
+        else
+            if (statement.EndsWith('?'))
+                return "Sure.";
         return "Whatever.";
     }
 
@@ -27,26 +24,21 @@ public static class Bob
             return false;
         if (!ContainsLetters(toCheck))
             return false;
-        else
-        {
-            foreach (char value in toCheck)
-                if (value > 96 && value < 123)
-                    return false;
-            return true;
-        }
+        foreach (char value in toCheck)
+            if (char.IsLower(value))
+                return false;
+        return true;
+        
     }
     
     public static bool ContainsLetters(string toCheck)
     {
         if (toCheck.Length == 0)
             return false;
-        else
-        {
-            foreach (char value in toCheck)
-                if ((value > 96 && value < 123) || (value >=65 && value <=90))
-                    return true;
-            return false;
-        }
+        foreach (char value in toCheck)
+            if (char.IsLetter(value))
+                return true;
+        return false;
     }
 
 }
