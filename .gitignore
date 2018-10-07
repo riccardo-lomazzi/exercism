@@ -5,3 +5,5 @@ csharp/*/.vs
 csharp/*/*.sln
 csharp/*/*.csproj.user
 **/.solution.json
+**/node_modules
+**/package-lock.json
